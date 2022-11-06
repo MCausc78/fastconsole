@@ -1,0 +1,15 @@
+author: MCausc78
+name: FastConsole
+version: '${version}'
+main: org.mcausc78.fastconsole.FastConsole
+softdepend: [ PlaceholderAPI ]
+commands:
+  fastconsole:
+    aliases: [fconsole, fc, fastc, фастконсоль, фконсоль, фк, фц, фастконсол, фконсол, фастк, фастц]
+    description: Управление плагином FastConsole
+    usage: /<command> help|reload
+  console:
+    aliases: [consol, konsole, konsol, консол, консоль]
+    description: Исполнить команду от консоли
+    usage: /<command> команда
+permissions: []
