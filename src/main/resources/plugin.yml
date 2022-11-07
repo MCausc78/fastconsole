@@ -12,4 +12,3 @@ commands:
     aliases: [consol, konsole, konsol, консол, консоль]
     description: Исполнить команду от консоли
     usage: /<command> команда
-permissions: []

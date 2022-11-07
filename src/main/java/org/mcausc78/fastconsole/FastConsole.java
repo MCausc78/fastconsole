@@ -12,6 +12,7 @@ public final class FastConsole extends JavaPlugin {
                 .setExecutor(new FastConsoleCommand());
         instance = this;
         saveDefaultConfig();
+        reloadConfig();
     }
 
     @Override

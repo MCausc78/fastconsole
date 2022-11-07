@@ -18,7 +18,7 @@ public class TextUtils {
         return ChatColor.translateAlternateColorCodes('&', s);
     }
     public static String handle(String s, Player p) {
-        return colorize(PlaceholderAPI.setPlaceholders(p, s));
+        return colorize(isEnabledPlaceholderAPI() ? PlaceholderAPI.setPlaceholders(p, s) : s);
     }
     public static String handle(String s, CommandSender cs) {
         return ((cs instanceof Player) ? handle(s, (Player)cs) : handle(s, (Player) null));

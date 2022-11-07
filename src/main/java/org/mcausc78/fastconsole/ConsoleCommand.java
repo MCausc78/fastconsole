@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 public class ConsoleCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        System.out.println("c, if instanceof");
         if(!(sender instanceof Player)) {
             FastConsole
                     .getInstance()
@@ -22,6 +23,7 @@ public class ConsoleCommand implements CommandExecutor {
                     );
             return true;
         }
+        System.out.println("c, if can");
         if(!(PlayerUtils.canUseConsole(sender))) {
             PlayerUtils.getMessages(FastConsole.getMode())
                 .forEach(s ->
@@ -31,6 +33,7 @@ public class ConsoleCommand implements CommandExecutor {
                 );
             return true;
         }
+        System.out.println("c, if argc<=0 (c)");
         if(args.length <= 0) {
             FastConsole
                     .getInstance()
@@ -43,10 +46,12 @@ public class ConsoleCommand implements CommandExecutor {
                     );
             return true;
         }
+        System.out.println("c, calculate result");
         boolean result = Bukkit.dispatchCommand(
                 Bukkit.getConsoleSender(),
                 String.join(" ", args)
         );
+        System.out.println("c, send message");
         FastConsole
                 .getInstance()
                 .getConfig()
@@ -58,6 +63,7 @@ public class ConsoleCommand implements CommandExecutor {
                                     .replace("$result.bool$", Boolean.toString(result)), sender)
                     )
                 );
+        System.out.println("c, done");
         return true;
     }
 }

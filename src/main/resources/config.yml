@@ -32,37 +32,38 @@ commands:
 # Язык.
 #
 language:
-  console:
-    # Сообщение зависит от установленного режима доступа.
-    access-denied:
-      permission-or-list:
-        - '&d&lКонсоль&7 >&c Вас нет в списке, либо же у вас нет прав!'
-      permission-and-list:
-        - '&d&lКонсоль&7 >&c У вас нет прав и вас нет в списке!'
-      permission:
-        - '&d&lКонсоль&7 >&c Нет прав.'
-      list:
-        - '&d&lКонсоль&7 >&c Вы не администратор!'
-      none:
-        - '&d&lКонсоль&7 >&c Это что за прикол?'
-    # Сообщение для консоли/сущностей, но не игроков.
-    only-for-players:
-      - '&c&lOnly for players.'
-    # Пишется, когда игрок вызвал команду без аргументов.
-    usage:
-      - '&d&lКонсоль&7 >&c Использование: /$label$ <команда>'
-    executed:
-      - '&d&lКонсоль&7 >&a Команда выполнена!&7 (результат: $result.bool$)'
-  fastconsole:
-    no-permission:
-      - '&6&lFastConsole&7 >&c Нет прав.'
-    usage:
-      - '&6&lFastConsole&7 >&a Для помощи напишите `/$label$ help`.'
-    help:
-      - '&6&lFastConsole&7 >&a Список моих команд:'
-      - '&6/$label$ help&7 -&a показывает это'
-      - '&6/$label$ reload&7 -&a перезагружает конфигурацию'
-    config-reloaded:
-      - '&6&lFastConsole&7 >&a Конфигурация плагина перезагружена.'
-    unknown-subcommand:
-      - '&6&lFastConsole&7 >&c Неизвестная подкоманда. Попробуйте `/$label$ help` для получения помощи.'
+  commands:
+    console:
+      # Сообщение зависит от установленного режима доступа.
+      access-denied:
+        permission-or-list:
+          - '&d&lКонсоль&7 >&c Вас нет в списке, либо же у вас нет прав!'
+        permission-and-list:
+          - '&d&lКонсоль&7 >&c У вас нет прав и вас нет в списке!'
+        permission:
+          - '&d&lКонсоль&7 >&c Нет прав.'
+        list:
+          - '&d&lКонсоль&7 >&c Вы не администратор!'
+        none:
+          - '&d&lКонсоль&7 >&c Это что за прикол?'
+      # Сообщение для консоли/сущностей, но не игроков.
+      only-for-players:
+        - '&c&lOnly for players.'
+      # Пишется, когда игрок вызвал команду без аргументов.
+      usage:
+        - '&d&lКонсоль&7 >&c Использование: /$label$ <команда>'
+      executed:
+        - '&d&lКонсоль&7 >&a Команда выполнена!&7 (результат: $result.bool$)'
+    fastconsole:
+      no-permission:
+        - '&6&lFastConsole&7 >&c Нет прав.'
+      usage:
+        - '&6&lFastConsole&7 >&a Для помощи напишите `/$label$ help`.'
+      help:
+        - '&6&lFastConsole&7 >&a Список моих команд:'
+        - '&6/$label$ help&7 -&a показывает это'
+        - '&6/$label$ reload&7 -&a перезагружает конфигурацию'
+      config-reloaded:
+        - '&6&lFastConsole&7 >&a Конфигурация плагина перезагружена.'
+      unknown-subcommand:
+        - '&6&lFastConsole&7 >&c Неизвестная подкоманда. Попробуйте `/$label$ help` для получения помощи.'
